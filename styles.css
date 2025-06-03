@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-background);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #f6f6f9;
+}
+
+.profile-frame {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+    width: calc(100% - 3rem); /* Adjust width */
+    max-width: 500px; /* Set a maximum width to control the size */
+    box-sizing: border-box;
+    text-align: left;
+    position: relative;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0.1rem;
+}
+
+.icon {
+    position: absolute;
+    left: 420px;
+    top: 60%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #888;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+    width: 100%;
+    background-color: hsl(208, 50%, 50%, 6.5%);
+    padding: 1rem 1.35rem calc(0.75rem - 2px) 1.35rem;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    border-radius: 10px;
+    color: black;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 0px #cdcaca;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    margin-top: 1rem;
+}
+
+button {
+    width: 150px; /* Set the desired width */
+    padding: 1rem; /* Adjust the padding */
+    font-size: 0.88rem;
+    background-color: #F84018;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+    margin: 10px auto; /* Center the button */
+    display: block; /* Ensure it's treated as a block-level element */
+}
+.signup-text {
+    text-align: center;
+    margin-top: -20px; /* Adjust the space above the question */
+}
+
+.signup-text a {
+    color: #F84018;
+    text-decoration: underline; /* Underline the link */
+    font-weight: bold; /* Make the text bold */
+}
+button:hover {
+    background-color: #fe6b4a;
+}
+
+.profile-frame h1 {
+    margin-bottom: -0.8rem; /* Reduced the margin below the h1 */
+}
+.error-message {
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text */
+    border: 1px solid #f5c6cb; /* Red border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Padding for spacing */
+    margin-bottom: -20px; /* Space below the message */
+    font-size: 14px; /* Slightly smaller font */
+    text-align: center; /* Center the text */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%; /* Full width to fit container */
+}

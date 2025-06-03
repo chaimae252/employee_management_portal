@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html {
+    font-size: 14px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-background);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+main {
+    margin-top: 1.4rem;
+    overflow-y: auto;
+    padding-bottom: 2rem;
+}
+.list {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f6f6f9;
+}
+.list .container2 {
+    height: 100vh;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.list .container2 > div {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.profile-frame {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+    align-items: flex-start;
+    width: calc(100% - 3rem);
+    margin-left: 1.5rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    box-sizing: border-box;
+    text-align: left;
+    position: relative;
+    height: 100%; /* Ensure it can take the full height */
+    overflow-y: auto; /* Enable vertical scrolling inside the frame */
+}
+.container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 12rem 1fr;
+    position: relative;
+}
+main .list-employees{
+    margin-top: 1.3rem;
+}
+main .list-employees h2{
+    margin-bottom: 0.8rem;
+}
+main .list-employees table{
+    background-color: var(--color-white);
+    width: 100%;
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    transition: all 0.3s ease;
+}
+main table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+main table tbody tr:last-child td{
+    border: none;
+}
+/* Style for the edit icon */
+a i.fa-pencil {
+    color: #f84018; /* Icon color */
+    font-size: 15px; /* Adjust icon size */
+    cursor: pointer;
+}
+
+a i.fa-pencil:hover {
+    color: #f37053; /* Darker color on hover */
+}
+.h{
+    font-weight: 800;
+    margin-left: 350px;
+    font-size: 1.8rem;
+    margin-bottom: 1rem; /* Add some space below the h1 */
+    z-index: 2; /* Ensure it stays on top of other elements */
+}
+.here {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.button a {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding: 0.6rem; 
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    background-color: #f84018; 
+    border-radius: 0.5rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+    width: 150px; 
+    height: 40px; 
+    text-align: center;
+}
+.button a:hover {
+    background-color: #ff7b5b; 
+}
+.button .material-icons-sharp {
+    font-size: 15px; 
+    margin-right: 5px;
+}
+.button h3 {
+    margin: 0;
+    font-size: 11px; 
+    font-weight: bold;
+}
+.button{ /* Space below the button */
+    text-align: right; /* Align the button to the right */
+   margin: 0; /* Add some space below the h1 */
+}
+/* Notification styles */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 460px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+.notification.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.notification.error {
+    background-color: #f44336;
+    color: white;
+}
+
+.notification.show {
+    display: block;
+}
+td a i {
+    cursor: pointer;
+}
+
+td a i:hover {
+    color: #000;
+}
+/* Modal styles */
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Ensures the modal appears on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent dark background */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px; /* Smooth edges */
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    animation: fadeIn 0.3s ease-in-out; /* Smooth appearance */
+}
+
+/* Style the modal buttons */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-button {
+    background-color: #f84018;
+    color: white;
+}
+
+.confirm-button:hover {
+    background-color: #ff7b5b;
+}
+
+.cancel-button {
+    background-color: #bbb;
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: #888;
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    position: fixed; /* Fix the position at the top */
+    top: 20px; /* Adjust top spacing as needed */
+    left: 57%;
+    transform: translateX(-50%);
+    width: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 100; /* Make sure it stays on top */
+}
+
+.success-message i {
+    margin-right: 10px;
+    font-size: 22px;
+    color: #28a745;
+}
+
+.success-message.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+.filters-and-button {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Space out the items */
+    margin-top: 1rem; /* Add space below the h1 */
+}
+
+.filters-search {
+    display: flex; /* Ensure the search filters are in a row */
+    gap: 1rem; /* Space between elements */
+}
+
+.filters-search select,
+.filters-search input,
+.filters-search button {
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+}
+.button{
+    margin-top: -2.6rem;
+    margin-left: 54rem;
+}

@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensures full height for scrolling */
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-background);
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+.container {
+    display: flex; /* Changed from grid to flex */
+    flex-direction: column; /* Allows for vertical stacking */
+    width: 100%;
+    height: 100%; /* Fill the height of the body */
+}
+
+main {
+    margin-top: 1.4rem;
+    overflow-y: auto; /* Allows vertical scrolling */
+    padding-bottom: 2rem;
+}
+
+.right {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f6f6f9;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allows this container to grow and fill the available space */
+}
+
+/* Individual project box style */
+.project-frame {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; /* Reduced gap between items in the box */
+    background-color: #fff;
+    padding: 1.5rem; /* Reduced padding to minimize height */
+    border-radius: 1rem; /* Slightly smaller border radius */
+    box-shadow: 0 1rem 2rem rgba(132, 139, 200, 0.18);
+    align-items: flex-start;
+    box-sizing: border-box;
+    text-align: left;
+    width: calc(33.33% - 1.5rem); /* Three boxes in a row with spacing */
+    min-width: 280px; /* Keeps minimum width */
+    max-width: 350px; /* Limits maximum width */
+   /* Set a fixed height */
+}
+
+/* Adjusted container for all projects */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of boxes */
+    gap: 1.5rem; /* Space between boxes */
+    justify-content: flex-start; /* Aligns boxes to the start */
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Ensuring equal vertical space between rows */
+.project-frame {
+    margin-bottom: 1.5rem; /* Adjust this as needed */
+}
+
+.project-logo {
+    width: 100%; /* Adjust based on your design preferences */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 1rem; /* Optional: adds rounded corners */
+    margin-bottom: 0.8rem; /* Space between logo and text */
+}
+
+.project-frame img {
+    max-width: 100%; /* Ensures the image doesn't exceed the box width */
+    height: auto; /* Maintains the aspect ratio */
+    max-height: 100px; /* Limits the height of the image */
+    object-fit: contain; /* Ensures the image scales correctly without distortion */
+}
+
+.add-project-button {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding: 10px 15px; 
+    text-decoration: none;
+    color: white;
+    background-color: #f84018; 
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+    width: 150px; 
+    height: 40px; 
+    margin-left: 880px;
+    margin-top: -35px;
+    text-align: center; /* Space below the button */
+}
+
+.add-project-button:hover {
+    background-color: #ff7b5b; /* Darker shade for hover effect */
+}
+
+.project-frame {
+    position: relative; /* Allows absolute positioning of child elements */
+}
+
+/* Style for the delete icon container */
+.delete-icon {
+    position: absolute; /* Position relative to the project-frame */
+    bottom: 1px; /* Space from the bottom */
+    right: 10px; /* Space from the right */
+}
+.edit-icon {
+    position: absolute; /* Position relative to the project-frame */
+    bottom: 1px; /* Space from the bottom */
+    right: 30px; /* Space from the right */
+}
+.edit-icon button:hover {
+    opacity: 0.7; /* Change opacity on hover */
+}
+/* Optional: Add hover effect for the delete icon */
+.delete-icon button:hover {
+    opacity: 0.7; /* Change opacity on hover */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Ensures the modal appears on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent dark background */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px; /* Smooth edges */
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    animation: fadeIn 0.3s ease-in-out; /* Smooth appearance */
+}
+
+/* Style the modal buttons */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-button {
+    background-color: #f84018;
+    color: white;
+}
+
+.confirm-button:hover {
+    background-color: #ff7b5b;
+}
+
+.cancel-button {
+    background-color: #bbb;
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: #888;
+}
+
+/* File input styling */
+.logo-upload {
+    margin-top: 1rem; /* Add spacing above */
+}
+
+.logo-upload label {
+    cursor: pointer; /* Indicate it's clickable */
+    color: #333; /* Darker text for visibility */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+.logo-upload input[type="file"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for better click area */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #fff; /* White background */
+}
+.notification.show {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    position: fixed;
+    top: 20px;
+    left: 57%;
+    transform: translateX(-50%);
+    width: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 100;
+}
+
+.notification.show i {
+    margin-right: 10px;
+    font-size: 22px;
+    color: #28a745;
+}
+
+.notification.show.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+.project-frame .project-description {
+    overflow: hidden; /* Prevents overflow */
+    text-overflow: ellipsis; /* Adds ellipsis at the end if truncated */
+    font-size: 0.9rem; /* Text size */
+    line-height: 1.5; /* Adjust for readability */
+    max-height: 6.5rem; /* Approximate height for 4 lines */
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.project-frame {
+    height: auto; /* Ensures container scales with content */
+}

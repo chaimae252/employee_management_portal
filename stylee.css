@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+:root{
+    --color-primary: #f84018;
+    --color-danger: green;
+    --color-success: #516ce4;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+.dark-mode-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 14px;
+}
+body{
+    width: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-background);
+}
+a{
+    color: var(--color-dark);
+}
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+h2{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+h3{
+    font-weight: 500;
+    font-size: 0.87rem;
+}
+small{
+    font-size: 0.76rem;
+}
+p{
+    color: var(--color-dark-variant);
+}
+b{
+    color: var(--color-dark);
+}
+.text-muted{
+    color: var(--color-info-dark);
+}
+.primary{
+    color: var(--color-primary);
+}
+.danger{
+    color: var(--color-danger);
+}
+.success{
+    color: var(--color-success);
+}
+.warning{
+    color: var(--color-warning);
+}
+.container{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 12rem 1fr;
+    position: relative;
+}
+main{
+    margin-top: 1.4rem;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-bottom: 2rem;
+    position: relative; /* Added */
+}
+main .statistics{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+main .statistics > div{
+    background-color: var(--color-white);
+    padding: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+main .statistics > div:hover{
+    box-shadow: none;
+}
+main .statistics > div .status{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .statistics h3{
+   margin-left: 0.6rem;
+   font-size: 1rem;
+}
+main .statistics .progress{
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+}
+main .statistics svg{
+    width: 7rem;
+    height: 7rem;
+}
+main .statistics svg circle{
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+}
+main .statistics .employees svg  circle{
+    stroke: #f9623a;
+    stroke-dashoffset: -30;
+    stroke-dasharray: 150;
+}
+main .statistics .departements svg circle{
+    stroke: #f84018;
+    stroke-dasharray: 300;
+}
+
+main .statistics .projects svg circle{
+    stroke: #f84018;
+    stroke-dasharray: 400;
+}
+
+main .statistics .progress .percentage{
+    position: absolute;
+    top: -3px;
+    left: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+main .recent-activity{
+    margin-top: 1.3rem;
+}
+main .recent-activity h2{
+    margin-bottom: 0.8rem;
+}
+main .recent-activity table{
+    background-color: var(--color-white);
+    width: 100%;
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    transition: all 0.3s ease;
+}
+main .recent-activity table:hover{
+    box-shadow: none;
+}
+main table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+main table tbody tr:last-child td{
+    border: none;
+}
+main .recent-activity a{
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
+}
+main .statistics,
+main .recent-activity {
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevent stretching */
+}
+.wel{
+    font-size: 28px;
+}
+.profile-info .buttons a {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding: 10px 15px; 
+    text-decoration: none;
+    color: white;
+    background-color: #f84018; 
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+    width: 150px; 
+    height: 40px; 
+    text-align: center;
+}
+.profile-info .buttons a:hover {
+    background-color: #ff7b5b; 
+}
+.profile-info .buttons .material-icons-sharp {
+    font-size: 15px; 
+    margin-right: 5px;
+}
+.profile-info .buttons h3 {
+    margin: 0;
+    font-size: 11px; 
+    font-weight: bold;
+}
+ #view {
+    background-color: #f84018; 
+}
+ #view:hover {
+    background-color: #ff7b5b;
+}
+.buttons {
+    display: flex;
+    gap: 10px; 
+}
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.profile-photo{
+    margin-left: 10px;
+    
+}
+.profile-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row-reverse; /* Reverse the order of items */
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: -1rem;
+}
+.info{
+    margin-right: 10px;
+}
+.infos{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.infos h3,
+.infos h1 {
+    margin: 0;
+    padding: 0;
+    margin-left: 10px; 
+}
+
+.profile-link {
+    display: inline-block; 
+    align-items: unset;
+    justify-content: unset;
+    padding: 0; 
+    text-decoration: none; 
+    background-color: transparent; 
+    box-shadow: none; 
+    width: auto; 
+    height: auto; 
+    border-radius: 0; 
+    text-align: left; 
+}
+
+
+.profile-photo img {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%; 
+}
+
+.profile-link:focus,
+.profile-link:hover {
+    outline: none; 
+    background-color: transparent; 
+    box-shadow: none; 
+}
+
+.profile-photo img:focus,
+.profile-photo img:hover {
+    outline: none; 
+    background-color: transparent; 
+    box-shadow: none; 
+}

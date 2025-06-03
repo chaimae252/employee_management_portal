@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html {
+    font-size: 14px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-background);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+.container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 12rem 1fr;
+    position: relative;
+}
+
+main {
+    margin-top: 1.4rem;
+    overflow-y: auto;
+    padding-bottom: 2rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.right {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f6f6f9;
+}
+.container2{
+    height: 100vh;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.container2 > div{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.profile-frame {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+    align-items: flex-start;
+    width: calc(100% - 3rem);
+    margin-left: 1.5rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    box-sizing: border-box;
+    text-align: left;
+    position: relative;
+    height: 100%; /* Ensure it can take the full height */
+    overflow-y: auto;
+}
+
+.filters-search {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filters-search select, .filters-search input, .filters-search button {
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+}
+
+.filters-search button {
+    background-color: #F84018;
+    color: #fff;
+    cursor: pointer;
+}
+.btn{
+    background-color: #F84018;
+    color: #fff;
+    padding: 0.6rem;
+    border: none;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-left: 585px;
+    margin-top: -87px;
+    transition: 0.3s;
+    display: inline-block; /* Prevents full width */
+    text-align: center; /* Centers the text inside the button */
+}
+.filters-search button:hover {
+    background-color: #F84018;
+}
+
+table {
+    background-color: var(--color-white);
+    width: 135%;
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    transition: all 0.3s ease;
+}
+main table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+
+
+main table tbody tr:last-child td{
+    border: none;
+}
