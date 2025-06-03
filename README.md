@@ -12,8 +12,8 @@ Welcome to the **Employee Management Portal** – a web application designed to 
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript (or React, if applicable)
-- **Backend:** PHP (via XAMPP) or Node.js
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** PHP (via XAMPP) 
 - **Database:** MySQL
 - **Version Control:** Git & GitHub
 
